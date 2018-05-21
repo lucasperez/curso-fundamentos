@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+          <h1>Vaquinha <small>UFRJ </small></h1>
+      </div>
+      <div class="row">        
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title" id="assunto"></h3>
+            </div>
+            <div class="panel-body">
+              <ul id="itensDaVaquinha">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title" id="doacao">Doar</h3>
+            </div>
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <label for="doarRemetente">Doar de</label>
+                  <input type="text" class="form-control" id="doarRemetente" placeholder="Endereço de uma conta ethereum" value="0xe91bc3360A1a57ED97b657c9bb24A04736a8f19C">
+                </div>
+                <div class="form-group">
+                  <label for="doarDestinatario">Doar para</label>
+                  <input type="text" disabled class="form-control" id="doarDestinatario" placeholder="Endereço de uma conta ethereum">
+                </div>
+                <div class="form-group">
+                  <label for="valor">Valor</label>
+                  <input type="text" class="form-control" id="valor" placeholder="Valor em Ether">
+                </div>
+                <button type="button" class="btn btn-info" id="doar">Doar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title" id="doacao">Desitir de Doar</h3>
+            </div>
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <label for="desistirRemetente">Endereço de quem está desistindo</label>
+                  <input type="text" class="form-control" id="desistirRemetente" placeholder="Endereço de uma conta ethereum" value="0xe91bc3360A1a57ED97b657c9bb24A04736a8f19C">
+                </div>
+                <button type="button" class="btn btn-danger" id="desistir">Desistir</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="app.js"></script>
+</html>
